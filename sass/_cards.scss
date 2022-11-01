@@ -1,0 +1,48 @@
+.card {
+    background: transparent;
+    margin: 3rem 2rem;
+    color: var(--color-near-white);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    height: 20vh;
+    justify-content: center;
+
+    @media only screen and (max-width: 37.5em) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        gap: 3rem;
+        }
+
+
+    &__1 {
+        padding: 2rem 4rem;
+        border: 1px solid rgba(rgb(82, 111, 124), 0.7);
+        box-shadow: var(--color-secondary), 6px;
+        margin: 0 auto;
+        position: relative;
+
+
+    }
+
+    &__text {
+        font-size: 1.5rem; 
+        font-weight: 400;
+        position: relative;
+
+        
+    }
+
+    &__side {
+        &--back {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+        }
+    }
+
+}

@@ -1,0 +1,74 @@
+:root {
+    --color-primary:#131d29;
+    --color-secondary : #8eb6e7;
+    --color-text-grey : #69615f;
+    --color-near-white : #d9dde1;
+
+
+    // RESPONSIVE BREAKPOINTS
+    --bp-largest: 75em; //1200px
+    --bp-large: 62.5em; //1000px
+    --bp-medium: 50em; //800px
+    --bp-small: 37.5em; //600px
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+
+@media only screen and (max-width: var(--bp-medium)) {
+    font-size: 50%;
+  } 
+}
+.container {
+    background-image: linear-gradient(to right , hsla(0, 0%, 0%, 0.637), hsla(213, 37%, 12%, 0.753)), url(../img/pray.jpeg);
+    background-image: url(../img/pray.jpeg);
+    background-size: cover;
+    background-position: top;
+    max-height: 100vh;
+
+    @media only screen and (max-width: 60em) {
+        
+        background: linear-gradient(to right , hsla(0, 0%, 0%, 0.637), hsla(213, 37%, 12%, 0.753)), url(../img/pray.jpeg) no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    @media only screen and (max-width: 37.5em) {
+        background-size: cover;
+        background: url(../img/pray.jpeg) no-repeat center center fixed;
+        filter: blur(1);
+    }
+    
+}
+.span {
+    padding: 1.7rem 0;
+
+    &__text {
+        color: var(--color-secondary);
+    }
+}
+
+.heading {
+    &__3 {
+        color: var(--color-secondary);
+        font-size: 1.9rem;
+        font-weight: 800;
+        margin-bottom: 3rem;
+        border-bottom: 2px solid var(--color-text-grey);
+        width: fit-content;
+    }
+}
+
